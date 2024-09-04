@@ -4,29 +4,33 @@ body {
     width: 90%;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
     width: 100%;
     background-color: #8268a9;
     color: #ffffff;
     text-transform: uppercase;
 
-    .logo {
-        vertical-align: middle;
-        margin: auto;
-    }
-
     h1 {
         font-size: 6vw;
-        display: inline;
-        vertical-align: middle;
-        margin: auto;
     }
 
     li {
         list-style: none;
-        display: inline;
         margin-right: 2vw;
     }
+
 
     a {
         text-decoration: none;
@@ -41,8 +45,6 @@ header {
 
 .conteudo-principal {
     width: 77%;
-    display: inline-block;
-    vertical-align: top;
 
     h2 {
         color: #8268a9;
@@ -53,14 +55,16 @@ header {
     article {
         /* Nao teve efeito, consultar com o Tupinamba */
         overflow: auto;
+
+        p {
+            font-size: 1.5vw;
+            text-align: justify;
+        }
     }
 }
 
-/* Barra Lateral */
 aside {
     width: 22%;
-    display: inline-block;
-    vertical-align: middle;
 
     h2 {
         color: #8268a9;
@@ -73,7 +77,6 @@ aside {
     }
 }
 
-/* Rodapé */
 footer {
     width: 100%;
     background-color: #8268a9;
@@ -85,7 +88,6 @@ footer {
 
     li {
         list-style: none;
-        display: inline;
     }
 }
 
@@ -94,9 +96,6 @@ p {
     color: #64518c;
 }
 
-/* Começo da responsividade */
-
-/* Celulares */
 @media screen and (max-width:800px) {
     header {
         .logo {
@@ -146,7 +145,6 @@ p {
     }
 }
 
-/* Tablets */
 @media screen and (min-width:800px) and (max-width:1000px) {
     header {
         .logo {
